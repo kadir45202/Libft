@@ -1,0 +1,2 @@
+# Libft
+Deniyoruz bir şeyler

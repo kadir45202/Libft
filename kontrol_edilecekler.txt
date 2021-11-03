@@ -1,1 +1,5 @@
 ft_atoi çalışıyor mu kontrol et
+memchr bak
+ft_memmove anlamadım pek
+memcmp
+ft_itoa

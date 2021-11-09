@@ -5,3 +5,5 @@ memcmp
 ft_itoa
 
 strdup - anlamadım
+
+strchr

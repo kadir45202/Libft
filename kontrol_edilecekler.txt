@@ -7,3 +7,5 @@ ft_itoa
 strdup - anlamadım
 
 strchr
+
+mem dosyalarına dön bak

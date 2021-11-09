@@ -3,3 +3,5 @@ memchr bak
 ft_memmove anlamadım pek
 memcmp
 ft_itoa
+
+strdup - anlamadım

@@ -1,53 +1,29 @@
 #include "libft.h"
 
-static char	*ft_array(char *x, unsigned int number, long int len)
-{
-	while (number > 0)
-	{
-		x[len--] = 48 + (number % 10);
-		number = number / 10;
-	}
-	return (x);
-}
-
-static long int	ft_len(int n)
-{
-	int					len;
-
-	len = 0;
-	if (n <= 0)
-		len = 1;
-	while (n != 0)
-	{
-		len++;
-		n = n / 10;
-	}
-	return (len);
-}
-
 char	*ft_itoa(int n)
 {
-	char				*x;
-	long int			len;
-	unsigned int		number;
-	int					sign;
+	char	*str;
+	int		i;
+	int		sign;
 
+	i = 0;
 	sign = 1;
-	len = ft_len(n);
-	x = (char *)malloc(sizeof(char) * (len + 1));
-	if (!(x))
+	if (!(str = (char *)malloc(sizeof(char) * 12)))
 		return (NULL);
-	x[len--] = '\0';
-	if (n == 0)
-		x[0] = '0';
+	if (n == -2147483648)
+		return (ft_strcpy(str, "-2147483648"));
 	if (n < 0)
 	{
-		sign *= -1;
-		number = n * -1;
-		x[0] = '-';
+		sign = -1;
+		n = -n;
 	}
-	else
-		number = n;
-	x = ft_array(x, number, len);
-	return (x);
+	while (n > 0)
+	{
+		str[i++] = n % 10 + '0';
+		n = n / 10;
+	}
+	if (sign == -1)
+		str[i++] = '-';
+	str[i] = '\0';
+	return (ft_strrev(str));
 }

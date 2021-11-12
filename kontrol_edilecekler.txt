@@ -9,3 +9,5 @@ strdup - anlamadım
 strchr
 
 mem dosyalarına dön bak
+
+strstrim

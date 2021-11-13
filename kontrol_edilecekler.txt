@@ -13,3 +13,7 @@ mem dosyalarına dön bak
 strstrim
 
 split
+
+ft_lstdelone
+ft_lstclear
+ft_lstmap

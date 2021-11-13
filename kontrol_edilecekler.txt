@@ -11,3 +11,5 @@ strchr
 mem dosyalarına dön bak
 
 strstrim
+
+split

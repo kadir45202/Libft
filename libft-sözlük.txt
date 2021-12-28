@@ -1,0 +1,42 @@
+﻿ft_atoi                        İnt tipini Stringe çeviren fonksiyon
+ft_bzero                Stringin belli bir kısmını sansürlüyor
+ft_calloc                Bellek ayırıp ayrılan belleğe 0 dolduruyor
+ft_isalnum                Harf veya sayı mı olduğunu gösteriyor
+ft_isalpha                Harf olduğunu gösteriyor
+ft_isascii                Ascii tablosundan mı
+ft_isdigit                Sayı olduğunu gösteriyor
+ft_isprint                Yazdırılabilir mi diye bakıyor
+ft_itoa                        Yazıyı stringe çeviriyor
+ft_lst_add_back        Bağlı listeleri ilki sonuncuya veriyor
+ft_lstadd_front        Bağlı listeleri sonu ilke veriyor
+ft_lstclear                Bağlı listenin bir elementini siliyor
+ft_lestdelone                Bağlı listenin bir elementini boşaltıyor
+ft_lstiter                Bağlı listenin bir elemanına pointer atar
+ft_lstlast                Bağlı listenin sonuncu elemanını verir
+ft_lstmap                Bağlı listenin --------------------
+ft_lstnew                Bağlı listeye yeni element ekler
+ft_lstsize                Bağlı liste uzunluğu
+ft_memccpy                veri tasarruflu kopyalama
+ft_memchr                c'nin ilk örneği için s'nin ilk n baytını tarar
+ft_memcpy                Kopyalama
+ft_memmove                Veri taşıma        
+ft_memset                stringin belli kısmını sansürleme
+ft_putchar_fd                belirtilen dosyaya putchar gönderiyor
+ft_putstr_fd                String uzunluğu kadar yazar
+ft_putendl_fd                Hem uzunluk kadar yazdırır hem de alt satıra geçer
+ft_putnbr_fd                Sayıyı 10’a bölerek ve + veya - olduğunu belirterek yazıyor
+ft_split                        String kelimelere ayırmak için
+ft_strcat                İki dizeyi birleştiriyor
+ft_strchr                Stringin belli karakterinden sonraki kısmı alıyor
+ft_strcmp                Stringin aynı mı olduğuna bakıyor ve farkını geri döndürüyor
+ft_strcpy                String kopyalama
+ft_strdup                Stringin yerini pointere vermek
+ft_strndup                Stringin belli kısmını pointere vermek
+ft_strjoin                Stringleri arka arkaya ekliyor
+ft_strlcat                İki dizeyi belli karakter kadar birleştiriyor
+ft_strlen                String uzunluğu
+ft_strncat                İlk stringin sonuna ikinci dizenin belli bir kısmını kopyalar
+ft_strncpy                Stringi diğerinin üzerine yazar
+ft_strtrim                Stringin başında ve sonunda belli karakterler olmadan string alır
+ft_tolower                Büyük harfi küçük yapar
+ft_toupper                Küçük harfi büyük yapar

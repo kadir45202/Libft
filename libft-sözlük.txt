@@ -1,4 +1,4 @@
-﻿ft_atoi                        İnt tipini Stringe çeviren fonksiyon
+﻿ft_atoi                  string olarak verilen sayıyı int tipine çeviren fonksiyon
 ft_bzero                Stringin belli bir kısmını sansürlüyor
 ft_calloc                Bellek ayırıp ayrılan belleğe 0 dolduruyor
 ft_isalnum                Harf veya sayı mı olduğunu gösteriyor

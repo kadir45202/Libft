@@ -6,7 +6,7 @@ ft_isalpha                Harf olduğunu gösteriyor
 ft_isascii                Ascii tablosundan mı
 ft_isdigit                Sayı olduğunu gösteriyor
 ft_isprint                Yazdırılabilir mi diye bakıyor
-ft_itoa                        Yazıyı stringe çeviriyor
+ft_itoa                        int tipini stringe çeviriyor
 ft_lst_add_back        Bağlı listeleri ilki sonuncuya veriyor
 ft_lstadd_front        Bağlı listeleri sonu ilke veriyor
 ft_lstclear                Bağlı listenin bir elementini siliyor

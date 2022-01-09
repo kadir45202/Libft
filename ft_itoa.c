@@ -1,29 +1,66 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kcetin <kcetin@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/03 13:33:55 by kcetin            #+#    #+#             */
+/*   Updated: 2022/01/09 15:12:33 by kcetin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
+static long	ft_digitnb(int n)
+{
+	long		size;
+
+	if (n == 0)
+		return (1);
+	size = 0;
+	if (n < 0)
+	{
+		size++;
+		n = -n;
+	}
+	while (n != 0)
+	{
+		n /= 10;
+		size++;
+	}
+	return (size++);
+}
+
+static int	ft_sign(int n)
+{
+	if (n < 0)
+		return (1);
+	return (0);
+}
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		i;
-	int		sign;
+	long		n_long;
+	long		length;
+	char		*fresh;
 
-	i = 0;
-	sign = 1;
-	if (!(str = (char *)malloc(sizeof(char) * 12)))
+	n_long = n;
+	length = ft_digitnb(n_long);
+	fresh = (char *)malloc((length + 1) * sizeof(char));
+	if (!fresh)
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
-	if (n < 0)
+	fresh[length] = '\0';
+	length--;
+	if (n_long < 0)
+		n_long = -n_long;
+	while (length >= 0)
 	{
-		sign = -1;
-		n = -n;
+		fresh[length] = (n_long % 10) + '0';
+		length--;
+		n_long /= 10;
 	}
-	while (n > 0)
-	{
-		str[i++] = n % 10 + '0';
-		n = n / 10;
-	}
-	if (sign == -1)
-		str[i++] = '-';
-	str[i] = '\0';
-	return (ft_strrev(str));
+	if (ft_sign(n))
+		fresh[0] = '-';
+	return (fresh);
 }

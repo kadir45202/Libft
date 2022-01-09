@@ -1,11 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kcetin <kcetin@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/03 13:34:54 by kcetin            #+#    #+#             */
+/*   Updated: 2022/01/09 17:45:05 by kcetin           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
-	char *copy;
+	char	*str;
+	int		i;
 
-	copy = (char*)malloc(sizeof(*s) * (ft_strlen(s) + 1));
-	if (copy)
-		ft_strcpy(copy, s);
-	return (copy);
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

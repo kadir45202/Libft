@@ -1,47 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcetin <kcetin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/03 13:35:18 by kcetin            #+#    #+#             */
-/*   Updated: 2022/01/09 17:27:16 by kcetin           ###   ########.fr       */
+/*   Created: 2022/01/03 13:35:14 by kcetin            #+#    #+#             */
+/*   Updated: 2022/01/06 18:23:48 by kcetin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	in_set(char c, const char *set)
+static	int	ft_is_inset(char const *set, char c)
 {
-	int	i;
-
-	i = 0;
-	while (set[i])
-		if (set[i++] == c)
+	while (*set)
+	{
+		if (*set == c)
 			return (1);
+		set++;
+	}
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char		*str;
-	long long	start;
-	long long	end;
+	char	*str_trim;
+	int		i;
+	int		j;
+	int		k;
 
-	if (!s1 || !set)
-		return (NULL);
-	end = ft_strlen(s1) - 1;
-	start = 0;
-	while (in_set(s1[start], set))
-		start++;
-	while (in_set(s1[end], set) && end >= 0)
-		end--;
-	if (end < 0)
-		return (ft_strdup(""));
-	str = malloc(end - start + 2);
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s1 + start, end - start + 2);
-	return (str);
+	i = 0;
+	k = 0;
+	while (ft_is_inset(set, s1[i]) == 1)
+		i++;
+	j = ft_strlen(s1 + i);
+	while (ft_is_inset(set, s1[j + i - 1]) == 1 && s1[i])
+		j--;
+	str_trim = (char *)malloc(sizeof(char) * (j + 1));
+	if (!(str_trim))
+		return (0);
+	while (k < j)
+	{
+		str_trim[k] = s1[i + k];
+		k++;
+	}
+	str_trim[j] = '\0';
+	return (str_trim);
 }

@@ -6,7 +6,7 @@
 /*   By: kcetin <kcetin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 13:34:28 by kcetin            #+#    #+#             */
-/*   Updated: 2022/01/06 18:43:52 by kcetin           ###   ########.fr       */
+/*   Updated: 2022/01/17 14:34:06 by kcetin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	char	*a;
-	char	*b;
+	char		*d;
+	const char	*s;
 
-	a = (char *)src;
-	b = (char *)dst;
+	d = dst;
+	s = src;
+	if (!dst && !src)
+		return (0);
 	while (n--)
-	{
-		*b++ = *a++;
-	}
+		*d++ = *s++;
 	return (dst);
 }

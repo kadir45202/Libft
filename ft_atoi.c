@@ -6,34 +6,44 @@
 /*   By: kcetin <kcetin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/03 13:28:21 by kcetin            #+#    #+#             */
-/*   Updated: 2022/01/09 17:30:39 by kcetin           ###   ########.fr       */
+/*   Updated: 2022/01/17 14:33:13 by kcetin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-int	ft_atoi(const char *nptr)
+static	int	ft_isspace(int c)
 {
-	int				i;
-	int				sign;
-	unsigned int	result;
+	if (c == ' ' || c == '\r' || c == '\f' || c == '\v'
+		|| c == '\n' || c == '\t')
+		return (1);
+	return (0);
+}
 
-	i = 0;
+int	ft_atoi(const char *str)
+{
+	int		sign;
+	long	res;
+
+	res = 0;
 	sign = 1;
-	result = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-		|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (nptr[i] == '-')
-			sign = -1;
-		i++;
+		if (*str == '-')
+			sign *= -1;
+		str++;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
-		result = result * 10 + (nptr[i] - '0');
-		i++;
+		res = (res * 10) + (*str - '0');
+		str++;
 	}
-	return (result * sign);
+	res = res * sign;
+	if (res >= -2147483648 && res <= 2147483647)
+		return (res);
+	if (sign == -1)
+		return (0);
+	return (-1);
 }

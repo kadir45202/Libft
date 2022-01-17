@@ -1,50 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kcetin <kcetin@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/03 13:35:14 by kcetin            #+#    #+#             */
-/*   Updated: 2022/01/06 18:23:48 by kcetin           ###   ########.fr       */
+/*   Created: 2022/01/17 13:32:42 by kcetin            #+#    #+#             */
+/*   Updated: 2022/01/17 13:42:58 by kcetin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	ft_is_inset(char const *set, char c)
+static int	checker(char c, char const *set)
 {
-	while (*set)
-	{
-		if (*set == c)
+	int	i;
+
+	i = 0;
+	while (set[i])
+		if (set[i++] == c)
 			return (1);
-		set++;
-	}
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str_trim;
+	char	*str;
 	int		i;
 	int		j;
 	int		k;
 
 	i = 0;
 	k = 0;
-	while (ft_is_inset(set, s1[i]) == 1)
+	if (s1 == 0 || set == 0)
+		return (NULL);
+	j = ft_strlen(s1);
+	while (s1[i] && checker(s1[i], set))
 		i++;
-	j = ft_strlen(s1 + i);
-	while (ft_is_inset(set, s1[j + i - 1]) == 1 && s1[i])
+	while (j > i && checker(s1[j - 1], set))
 		j--;
-	str_trim = (char *)malloc(sizeof(char) * (j + 1));
-	if (!(str_trim))
-		return (0);
-	while (k < j)
-	{
-		str_trim[k] = s1[i + k];
-		k++;
-	}
-	str_trim[j] = '\0';
-	return (str_trim);
+	str = (char *)malloc(sizeof (char) * (j - i + 1));
+	if (!str)
+		return (NULL);
+	while (i < j)
+		str[k++] = s1[i++];
+	str[k] = '\0';
+	return (str);
 }

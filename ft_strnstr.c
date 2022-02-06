@@ -31,3 +31,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+//     const char *cp1 = "Bilgisayar";
+//     const char *cp2 = "ilgi";
+//     char *ret = strnstr(cp1, cp2,10);
+//     char *ret1 = ft_strnstr(cp1, cp2,10);
+//    printf("%ld \n",ret - cp1);
+//     printf("%s \n",ret1);
+//     return 0;
+// }

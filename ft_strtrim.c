@@ -47,3 +47,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[k] = '\0';
 	return (str);
 }
+
+// int main()
+// {
+// 	printf("%s\n", ft_strtrim("abqbc", "abc"));
+// 	printf("%s\n", ft_strtrim("xavocadoyz", "xyz"));
+// 	return 0;
+// }

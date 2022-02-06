@@ -29,3 +29,9 @@ char	*ft_strrchr(const char *s, int c)
 		ptr = (char *)(s + i);
 	return (ptr);
 }
+
+// int main()
+// {
+//     char *k = "Bilgisayar";
+//     printf("%s", ft_strrchr(k, 'a'));
+// }

@@ -27,3 +27,20 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	return (*(str1 + i) - *(str2 + i));
 }
+
+// int main( void )
+// {
+//     const char *cp1 = "Bilgileri";
+//     const char *cp2 = "Bilgileri";
+//     int ret;
+//     ret = ft_memcmp(cp1, cp2, 10);
+//     if(ret<0) printf("cp1 bellek içeriği cp2 bellek içeriğinden küçüktür!");
+//     else if(ret>0) printf("cp2 bellek içeriği cp1 bellek içeriğinden küçüktür!");
+//     else printf("cp1 bellek içeriği cp2 bellek içeriğine eşittir!");
+//     printf(" \n  ");  
+//     ret = memcmp(cp1, cp2, 10);
+//     if(ret<0) printf("cp1 bellek içeriği cp2 bellek içeriğinden küçüktür!");
+//     else if(ret>0) printf("cp2 bellek içeriği cp1 bellek içeriğinden küçüktür!");
+//     else printf("cp1 bellek içeriği cp2 bellek içeriğine eşittir!");
+//     return 0;
+// }

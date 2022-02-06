@@ -32,3 +32,14 @@ char	*ft_strdup(const char *s)
 	str[i] = '\0';
 	return (str);
 }
+
+//int main( void )
+// {
+//     const char *cp1 = "Bilgisayar";
+//     char *cp2 = strdup(cp1);
+
+//     printf("İlk karakter dizisi: %s\n", cp1);
+//     printf("Benzer olarak oluşturulan karakter dizisi: %s", cp2);
+
+//     return 0;
+// }

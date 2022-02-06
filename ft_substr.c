@@ -49,3 +49,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	char* str;
+// 	str = ft_substr("Hello, 42Seoul!", 7, 2);
+// 	printf("%s\n", str);
+// 	return 0;
+// }

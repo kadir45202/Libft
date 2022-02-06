@@ -16,3 +16,10 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+//  int		main()
+// {
+//     int fd ;
+//     fd = open("deneme.txt", 777);
+//     ft_putchar_fd('x', fd);
+// }

@@ -22,3 +22,19 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
+/*
+void ft_putstr(char *str)
+{
+	while(*str)
+	write(1, str++, 1);
+}
+int main ()
+
+{
+	t_list *a;
+	a = NULL;
+	ft_lstadd_back(&a, ft_lstnew("hello "));
+	ft_lstadd_back(&a, ft_lstnew("world"));
+	ft_lstiter(a, (void (*)(void *))ft_putstr);
+}
+*/

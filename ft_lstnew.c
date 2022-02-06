@@ -26,7 +26,7 @@ t_list	*ft_lstnew(void *content)
 
 // int		main(void)
 // {
-// 	char	str[] = "lorem ipsum dolor sit";
+// 	char	str[] = "selam merhaba byy";
 // 	t_list	*elem;
 // 	elem = ft_lstnew((void *)str);
 // 	printf("\n%s\n", elem->content);

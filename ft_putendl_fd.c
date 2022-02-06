@@ -17,3 +17,11 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
+
+// int main()
+// {
+//    int fd ;
+//     fd = open("deneme.txt", 777);
+//     char *k =  "Esra Budak\n";
+//     ft_putendl_fd(k, fd);
+// }

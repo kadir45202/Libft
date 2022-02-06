@@ -75,3 +75,17 @@ char	**ft_split(char const *s, char c)
 	res[i] = NULL;
 	return (res);
 }
+/*
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+        int i = 0;
+        char **a;
+        a = ft_split("marhaba.selamlar.mmm", '.');
+        printf("%s\n",a[0]);
+        printf("%s\n",a[1]);
+        printf("%s",a[2]);
+        
+
+}*/

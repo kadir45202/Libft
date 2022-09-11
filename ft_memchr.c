@@ -25,14 +25,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main( void )
-// {
-//     const char *cp = "Bilgisayar";
-//     const char cd = 'g';
-
-// printf("%c karakterinin bellek adresi: %p\n", cd, memchr(cp, cd, strlen(cp)));
-// printf("%c karakterinin bellek adresi: %p\n", cd, ft_memchr(cp, cd, strlen(cp)));
-
-//     return 0;
-// }
